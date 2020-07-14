@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="shortcut icon" type="image/svg" href="<?php echo get_stylesheet_directory_uri() . '/imgs/';?>bolt.svg"/>
+	<link rel="shortcut icon" type="image/svg" href="<?php echo get_stylesheet_directory_uri() . '/imgs/';?>talk.svg"/>
 	<?php wp_head(); ?>
 </head>
 
@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="wrapper">
 			<div class="container">
 					<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/imgs/EE_Logo_hz_blkgld.png';?>" alt="The Early Engineers logo." class="fluid img-fluid logo">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/imgs/talk.svg';?>" alt="The Scientific Discouse Logo." class="fluid img-fluid logo"><h1><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></h1>
 					</a>
 			</div>
 		</div>

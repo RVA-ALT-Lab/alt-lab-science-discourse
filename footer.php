@@ -31,12 +31,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 		                        <h3>Virginia Commonwealth University</h3>
 		                    </a>
 
-		                    <a href="https://egr.vcu.edu/" title="footer link to VCU Engineering">
-		                        <h4>College of Engineering</h4>
+		                    <a href="https://soe.vcu.edu/" title="Link to the VCU School of Education.">
+		                        <h4>School of Education</h4>
 		                    </a>
 
-		                    <p>601 West Main Street<br>Box 843068<br>Richmond, Virginia 23284-3068</p>
-		                    <p><a href="https://egr.vcu.edu/about/outreach/contact-us/">Contact Us</a></p>
+		                    <p>1015 West Main Street<br>Box 842020<br>Richmond, VA 23284-2020</p>
 		                </div>
 
 		                <div class="col-md-6 text-white text-md-right">
