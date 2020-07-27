@@ -42,13 +42,26 @@ h1, h2, h3, h4, h5, h2 a {
 	padding: 20px 0 0 0;
 }
 
-#menu-container .col-md-9 {
-	background-image: url(../imgs/robot.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: right center;
-
+.robot-ray {	
+	fill: $gold;
+	animation: hideshow 10s ease infinite;
 }
+
+@keyframes hideshow {
+  0% { opacity: 1; }
+  4% { opacity: 0; }
+  6% { opacity: 1; }
+  8% { opacity: 0; }
+  10% { opacity: 1; }
+  12% { opacity: 0; }
+  14% { opacity: 1; }
+  16% { opacity: 0; }
+  22% { opacity: 1; }
+  24% { opacity: 0; }
+  26% { opacity: 1; }
+  28% { opacity: 0; }
+  30% { opacity: 1; }
+} 
 
 #top-menu-title {
 	font-family: 'Cantata One', serif;
