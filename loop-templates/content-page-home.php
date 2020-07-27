@@ -1,6 +1,6 @@
 <?php
 /**
- * Partial template for content in fullwidthpage-home.php
+ * Partial template for content in page.php
  *
  * @package UnderStrap
  */
