@@ -28,13 +28,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 		<!-- Your site title as branding in the menu -->
-		<div class="wrapper">
 			<div class="container" id="menu-container">
-					<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-					<h1><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></h1>
-					</a>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="<?php echo get_stylesheet_directory_uri();?>/imgs/science_bubbles_color.svg" class="discourse-logo" alt="Scientific Discourse Project logo.">
+					</div>
+					<div class="col-md-9">
+						<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+						<h1 id="top-menu-title">Science<br>Discourse<br>Project</h1>
+						</a>
+					</div>
+				</div>
 			</div>
-		</div>
 
 					<!-- end custom logo -->
 	<div id="wrapper-navbar">
