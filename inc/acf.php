@@ -8,69 +8,13 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-function total_time($id){   
-    $total_time = 0;
-    if (have_rows('time_needed',$id)){
-        $needs = get_field('time_needed');
-       foreach ($needs as $need ) {
-            $time = intval($need["time"]);  
-            $total_time = $total_time + $time;
-       }
-         return $total_time;
-    }
-}
 
-
-function ee_materials_count(){
-    $materials = get_post_meta( get_the_ID(), 'total_resource_count', true );
-    if ($materials > 1){
-        return $materials;
-    } else {
-        return 0;
-    }
-}
-
-//update totals 
-
-function ee_update_total_time( $post_id ) {
-    $total = total_time($post_id);
-    update_post_meta( $post_id, 'total_time_count', $total );
-
-}
-
-add_action( 'save_post', 'ee_update_total_time' );
-
-function ee_update_total_resources( $post_id ) {
-    $total = count(get_field('materials', $post_id));
-    update_post_meta( $post_id, 'total_resource_count', $total );
-}
-
-add_action( 'save_post', 'ee_update_total_resources' );
-    
-
-
-//subject theme loops
-
-function ee_subject_theme_list($acf_theme, $title){
-    if(get_field($acf_theme)){
-        $cats = get_field($acf_theme);
-         echo '<ul>';
-        if ($title != ''){
-            echo '<li class="li-focus">'.$title.': </li>';
-        }
-        foreach ($cats as $cat) {
-            $link = get_category_link($cat->term_id);
-            echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
-        }
-        echo '</ul>';
-    }    
-}
 
 
 //ACF SAVE and LOAD JSON
-add_filter('acf/settings/save_json', 'alt_ee_json_save_point');
+add_filter('acf/settings/save_json', 'alt_sci_dis_save_point');
  
-function alt_ee_json_save_point( $path ) {
+function alt_sci_dis_save_point( $path ) {
     
     // update path
     $path = get_stylesheet_directory() . '/acf-json';
@@ -80,9 +24,9 @@ function alt_ee_json_save_point( $path ) {
 }
 
 
-add_filter('acf/settings/load_json', 'alt_ee_json_load_point');
+add_filter('acf/settings/load_json', 'alt_sci_dis_json_load_point');
 
-function alt_ee_json_load_point( $paths ) {
+function alt_sci_dis_json_load_point( $paths ) {
     
     // remove original path (optional)
     unset($paths[0]);
