@@ -31,18 +31,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="container" id="menu-container">
 				<div class="row">
 					<div class="col-md-3">
-						<img src="<?php echo get_stylesheet_directory_uri();?>/imgs/science_bubbles_color.svg" class="discourse-logo" alt="Scientific Discourse Project logo.">
+						<img src="<?php echo get_stylesheet_directory_uri();?>/imgs/science_bubbles_color_bg.svg" class="discourse-logo" alt="Scientific Discourse Project logo.">
 					</div>
 					<div class="col-md-9">
 						<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-						<h1 id="top-menu-title">Science<br>Discourse<br>Project</h1>
+
+						<h1 id="top-menu-title"><span class="the">The</span> Science<br>Discourse<br>Project</h1>
 						</a>
 					</div>
 				</div>
 			</div>
 
 					<!-- end custom logo -->
-	<div id="wrapper-navbar">
+	<div class="container" id="wrapper-navbar">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 

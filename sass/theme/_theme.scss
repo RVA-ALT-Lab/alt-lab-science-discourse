@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h2 a {
 	font-family: 'Cantata One', serif;
 }
 
-.wrapper, body {
+.site {
 	background-color: $gray;
 	padding: 0;
 	background-image: url(../imgs/robot_bg.svg);
@@ -31,7 +31,6 @@ h1, h2, h3, h4, h5, h2 a {
 .discourse-logo{
 	border-radius: 50%;
 	margin: 5px auto;
-	background-color: $gray;
 	padding: 5px;
 	display: block;
 }
@@ -71,6 +70,7 @@ h1, h2, h3, h4, h5, h2 a {
 
 #wrapper-navbar {
 	background-color: $gold;
+	padding: 0;
 }
 
 #navbarNavDropdown, .nav-container {
@@ -88,8 +88,19 @@ h1, h2, h3, h4, h5, h2 a {
 	text-align: center;
 }
 
+#index-wrapper, #single-wrapper {
+	padding: 0;
+}
 
 
+.the {
+	font-size: 2rem;
+	font-family: 'Times', serif;
+	font-style: italic;
+	position: absolute;
+    left: -40px;
+    top: -10px;
+}
 //single lesson *************************
 .header-focus ul {
 	margin: 20px 0 20px 0;
