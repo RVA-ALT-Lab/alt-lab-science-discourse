@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<!-- ******************* The Navbar Area ******************* -->
 		<!-- Your site title as branding in the menu -->
 		<div class="wrapper">
-			<div class="container">
+			<div class="container" id="menu-container">
 					<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
 					<h1><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></h1>
 					</a>
