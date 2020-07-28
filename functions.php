@@ -31,9 +31,36 @@ foreach ( $understrap_includes as $file ) {
 	require_once get_template_directory() . '/inc' . $file;
 }
 
+//News loop on the front page
+function sci_dis_news(){
+  $html = "";  
+  $args = array(
+      'posts_per_page' => 10,
+      'post_type'   => 'post', 
+      'post_status' => 'publish', 
+      'category_name' => 'news',
+      'nopaging' => false,
+                    );
+    $the_query = new WP_Query( $args );
+                    if( $the_query->have_posts() ): 
+                      while ( $the_query->have_posts() ) : $the_query->the_post();
+                      $clean_title = sanitize_title(get_the_title());
+                      $html .= '<div class="col-md-8">';
+                      $html .= '<h2><a href="'.get_the_permalink().'">' . get_the_title() . '</a></h2>';
+                      $html .= '<p>' . get_the_excerpt() . '</p>';
+                      $html .= '</div>';                            
+                                             
+                       endwhile;
+                  endif;
+            wp_reset_query();  // Restore global post data stomped by the_post().
+   return '<div class="row news-wrapper">' . $html . '</div>';
+}
 
 
-
-
+// Replaces the excerpt "more" text by a link
+function wpdocs_excerpt_more( $more ) {
+    return '. . . ';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
  //print("<pre>".print_r($a,true)."</pre>");

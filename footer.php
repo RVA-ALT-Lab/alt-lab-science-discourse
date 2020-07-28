@@ -15,6 +15,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
+
+<div class="news-area container">
+	<h1>News</h1>
+	<?php echo sci_dis_news(); ?>		
+</div>
+
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">

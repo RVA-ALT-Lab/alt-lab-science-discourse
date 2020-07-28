@@ -25,12 +25,7 @@ defined( 'ABSPATH' ) || exit;
 		
 
 	</div><!-- .entry-content -->
-	<div class="entry-content">
-
-		<?php echo sci_dis_news(); ?>		
-		
-
-	</div><!-- .entry-content -->
+	
 
 	<footer class="entry-footer">
 
