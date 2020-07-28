@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 <div class="news-area container">
-	<h1>News</h1>
+	<h1>News</h1>	
 	<?php echo sci_dis_news(); ?>		
 </div>
 
