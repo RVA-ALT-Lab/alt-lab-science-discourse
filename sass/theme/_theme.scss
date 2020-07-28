@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h2 a {
 	text-align: center;
 }
 
-#index-wrapper, #single-wrapper, #full-width-page-wrapper {
+#index-wrapper, #single-wrapper, #full-width-page-wrapper, #page-wrapper {
 	padding: 0;
 }
 
@@ -222,7 +222,15 @@ h1, h2, h3, h4, h5, h2 a {
 //NEWS Area
 
 .news-area {
-	background-color: #b2e0d6;
+	background-color: #00b3be;
+}
+
+.news-article {
+	padding: 20px 5px;
+}
+
+.news-article a {
+	color: #000;
 }
 
 //facet search land

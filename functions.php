@@ -36,7 +36,7 @@ foreach ( $understrap_includes as $file ) {
 function sci_dis_news(){
   $html = "";  
   $args = array(
-      'posts_per_page' => 10,
+      'posts_per_page' => 4,
       'post_type'   => 'post', 
       'post_status' => 'publish', 
       'category_name' => 'news',
@@ -46,10 +46,10 @@ function sci_dis_news(){
                     if( $the_query->have_posts() ): 
                       while ( $the_query->have_posts() ) : $the_query->the_post();
                       $clean_title = sanitize_title(get_the_title());
-                      $html .= '<div class="col-md-6">';
+                      $html .= '<div class="col-md-6"><div class="news-article">';
                       $html .= '<h2><a href="'.get_the_permalink().'">' . get_the_title() . '</a></h2>';
                       $html .= '<p>' . get_the_excerpt() . '</p>';
-                      $html .= '</div>';                            
+                      $html .= '</div></div>';                            
                                              
                        endwhile;
                   endif;
