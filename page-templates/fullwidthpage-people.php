@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home Full Width Page
+ * Template Name: People Full Width Page
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
@@ -43,8 +43,8 @@ if ( is_front_page() ) {
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
-
 		</div><!-- .row end -->
+		 <?php echo sci_dis_people();?>
 
 	</div><!-- #content -->
 
