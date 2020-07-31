@@ -16,6 +16,8 @@ defined( 'ABSPATH' ) || exit;
 	    <div class="person-title"><?php the_field('title');?></div>
 	    <div class="contact">
 	    	<?php echo sci_dis_email();?>
+	    	<?php echo sci_dis_phone();?>
 	    </div>
+	    <?php echo sci_dis_group();?>
      </div>
 </div>           

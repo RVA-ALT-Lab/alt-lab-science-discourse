@@ -85,6 +85,22 @@ function sci_dis_email(){
 	}
 }
 
+function sci_dis_phone(){
+	global $post;
+	if (get_field('phone', $post->ID)){
+		return '<div class="person-phone">' . get_field('phone', $post->ID) . '</div>';
+	}
+}
+
+function sci_dis_group(){
+	global $post;
+	if (get_field('group', $post->ID)){
+		return '<div class="person-group ' . get_field('group', $post->iD)[0]->slug . '">' . get_field('group', $post->iD)[0]->name . '</div>';
+	}
+}
+
+
+
 function sci_dis_research(){
 	global $post;
 	if( have_rows('publication_details', $post->ID) ):
