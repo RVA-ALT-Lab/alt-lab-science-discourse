@@ -70,7 +70,7 @@ function sci_dis_people(){
                     if( $the_query->have_posts() ): 
                       while ( $the_query->have_posts() ) : $the_query->the_post();
                                         
-                       $html .= get_template_part( 'loop-templates/content', 'person' );                 
+                       get_template_part( 'loop-templates/content', 'person' );                 
                        endwhile;
                   endif;
             wp_reset_query();  // Restore global post data stomped by the_post().
@@ -84,4 +84,21 @@ function sci_dis_email(){
 		return '<div class="person-email">' . get_field('email', $post->ID) . '</div>';
 	}
 }
+
+function sci_dis_research(){
+	global $post;
+	if( have_rows('publication_details', $post->ID) ):
+	    // Loop through rows.
+	    while( have_rows('publication_details', $post->ID) ) : the_row();
+	    	get_template_part( 'loop-templates/content', 'research' );   
+	        
+	    // End loop.
+	    endwhile;
+
+	// No value.
+	else :
+	    // Do something...
+	endif;
+}
+
  //print("<pre>".print_r($a,true)."</pre>");}
