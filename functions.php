@@ -76,7 +76,12 @@ function sci_dis_people(){
             wp_reset_query();  // Restore global post data stomped by the_post().
 }
 
+add_image_size( 'person-profile', 350, 350, array( 'center', 'center' ) ); 
 
-
-
- //print("<pre>".print_r($a,true)."</pre>");
+function sci_dis_email(){
+	global $post;
+	if (get_field('email', $post->ID)){
+		return '<div class="person-email">' . get_field('email', $post->ID) . '</div>';
+	}
+}
+ //print("<pre>".print_r($a,true)."</pre>");}
