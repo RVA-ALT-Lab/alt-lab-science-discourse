@@ -69,16 +69,11 @@ function sci_dis_people(){
     $the_query = new WP_Query( $args );
                     if( $the_query->have_posts() ): 
                       while ( $the_query->have_posts() ) : $the_query->the_post();
-                      $clean_title = sanitize_title(get_the_title());
-                      $html .= '<div class="col-md-6"><div class="news-article">';
-                      $html .= '<h2><a href="'.get_the_permalink().'">' . get_the_title() . '</a></h2>';
-                      $html .= '<p>' . get_the_excerpt() . '</p>';
-                      $html .= '</div></div>';                            
-                                             
+                                        
+                       $html .= get_template_part( 'loop-templates/content', 'person' );                 
                        endwhile;
                   endif;
             wp_reset_query();  // Restore global post data stomped by the_post().
-   return '<div class="row people-wrapper">' . $html . '</div>';
 }
 
 

@@ -9,8 +9,6 @@
 defined( 'ABSPATH' ) || exit;
 
 
-
-
 //ACF SAVE and LOAD JSON
 add_filter('acf/settings/save_json', 'alt_sci_dis_save_point');
  
