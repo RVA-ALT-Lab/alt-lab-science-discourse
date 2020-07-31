@@ -263,80 +263,47 @@ h1, h2, h3, h4, h5, h2 a {
 	color: #000;
 }
 
-//facet search land
-.facet-lesson-info {
-	padding: 20px;
-	border: 1px solid #efefef;
-	height: 300px;
+//person land
+
+.person-name {
+	border: 4px solid #feb301;
+	padding: 10px;
+	text-align: center;
+	color: #000;
+	font-family: arial;
+	position: relative;
+	font-size: 1.3em;
 	border-radius: 10px;
-}
-
-.facet-lesson-info h2 {
-	font-size: 1.2em;
-	margin-top: 15px;
-}
-
-.facet-box h4 {
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 10px 30px 10px 30px;
-  border-radius: 24px;
-  // clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 5% 100%, 0% 50%, 5% 0);
-  background-color: $gold;
-  width: 100%;
-  font-size: 1.1em;
-  position: relative;
-  text-align: center;
-}
-
-.facet-box h4:before {
-	content: '';
-	height: 10px;
-	width: 10px;
-	display: block;
+	margin-top: -10px;
 	background-color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	left: 15px;
-	top: 15px;
-} 
-
-.facet-box h4:after {
-	content: '';
-	height: 10px;
-	width: 10px;
-	display: block;
-	background-color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	right: 15px;
-	top: 15px;
-} 
-
-
-.facet-lesson-info {
-	margin-bottom: 30px;
 }
 
-.text-search input {
-	width: 100%;
+.person-name:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #feb301;
+  right: 50%;
+  top: -23px;
 }
 
-#content .facetwp-checkbox {
-	background-size: 18px 18px;
-	padding: 5px 5px 10px 25px;
-	line-height: 1.1;
-    margin-bottom: 5px;
+.person-name:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  right: 50%;
+  top: -18px;
 }
 
-#content .facetwp-checkbox:hover{
-	background-color: #efefef;
-}
-
-#content .facetwp-checkbox.checked{
-	background-color: #efefef;
-}
 
 //footer
 #wrapper-footer {
