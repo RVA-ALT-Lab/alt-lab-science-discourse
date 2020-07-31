@@ -72,8 +72,8 @@
             "taxonomy": "category",
             "field_type": "checkbox",
             "add_term": 1,
-            "save_terms": 0,
-            "load_terms": 0,
+            "save_terms": 1,
+            "load_terms": 1,
             "return_format": "object",
             "multiple": 0,
             "allow_null": 0
@@ -117,8 +117,20 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "send-trackbacks"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1596137948
+    "modified": 1596194546
 }

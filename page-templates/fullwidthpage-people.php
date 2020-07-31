@@ -44,7 +44,9 @@ if ( is_front_page() ) {
 
 			</div><!-- #primary -->
 		</div><!-- .row end -->
-		<?php sci_dis_people();?>
+		<div class="row people-row">
+			<?php sci_dis_people();?>
+		</div>
 
 	</div><!-- #content -->
 
