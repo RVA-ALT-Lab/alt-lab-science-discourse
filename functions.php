@@ -64,6 +64,8 @@ function sci_dis_people(){
       'posts_per_page' => 30,
       'post_type'   => 'person', 
       'post_status' => 'publish', 
+      'orderby' => 'name',
+      'order'   => 'ASC',
       'nopaging' => false,
                     );
     $the_query = new WP_Query( $args );
