@@ -61,7 +61,7 @@ function sci_dis_news(){
 function sci_dis_people(){
   $html = "";  
   $args = array(
-      'posts_per_page' => 30,
+      'posts_per_page' => 40,
       'post_type'   => 'person', 
       'post_status' => 'publish', 
       'orderby' => 'name',
