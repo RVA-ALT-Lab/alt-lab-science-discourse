@@ -45,22 +45,27 @@ if ( is_front_page() ) {
 			</div><!-- #primary -->
 
 		</div><!-- .row end -->
-		<!--research-->
-		<div class="row research-row">
-			<div class="col-md-12">
-				<h2>Publications</h2>
-			</div>
-			<?php sci_dis_research();?>
-		</div>
-		<!--end research-->
-		<!--publication-->
-		<div class="row publication-row">
-		</div>
-		<!--end publication-->
+		<!--research-->		
 
 	</div><!-- #content -->
 
 </div><!-- #full-width-page-wrapper -->
+
+<div class="wrapper" id="research-box">
+	<div class="<?php echo esc_attr( $container ); ?>">
+		<div class="row research-row">
+				<div class="col-md-12">
+					<h2>Publications</h2>
+				</div>
+				<?php sci_dis_research();?>
+			</div>
+			<!--end research-->
+			<!--publication-->
+			<div class="row publication-row">
+			</div>
+			<!--end publication-->
+		</div>
+</div>
 
 <?php
 get_footer();
