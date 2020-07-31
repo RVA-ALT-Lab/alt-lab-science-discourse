@@ -52,18 +52,33 @@ if ( is_front_page() ) {
 </div><!-- #full-width-page-wrapper -->
 
 <div class="wrapper" id="research-box">
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="container">
 		<div class="row research-row">
-				<div class="col-md-12">
-					<h2>Publications</h2>
+				<div class="col-md-8">
+					<h2 id="publications">Publications</h2>
+					<div class="row" id="all-research">
+						<?php sci_dis_research();?>
+					</div>
 				</div>
-				<?php sci_dis_research();?>
+				<div class="col-md-4">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/imgs/paper.svg" class="img-fluid research-img" alt="Icon representing publications.">
+				</div>
+				
 			</div>
 			<!--end research-->
-			<!--publication-->
-			<div class="row publication-row">
+			<!--presentation-->
+			<div class="row presentation-row">
+				<div class="col-md-4">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/imgs/presentation.svg" class="img-fluid research-img" alt="Icon representing publications.">
+				</div>
+				<div class="col-md-8">
+					<h2 id="presentations">Presentations</h2>
+					<div class="row" id="all-research">
+						<?php sci_dis_presentations();?>
+					</div>
+				</div>				
 			</div>
-			<!--end publication-->
+			<!--end presentation-->
 		</div>
 </div>
 

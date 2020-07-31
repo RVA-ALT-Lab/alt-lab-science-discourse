@@ -118,105 +118,31 @@ h1, h2, h3, h4, h5, h2 a {
     top: -10px;
 }
 
-//single lesson *************************
-.header-focus ul {
-	margin: 20px 0 20px 0;
-	padding: 0;
+//research land
+
+.research-img {
+	height: 300px;	
 }
 
-.header-focus li {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 10px 30px 10px 30px;
-  // clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 5% 100%, 0% 50%, 5% 0);
-  background-color: $gold;
-  font-size: .9em;
-  border-radius: 24px;
-  position: relative;
-  margin-bottom: 7px;
+.research-row h2 {
+	margin-bottom: 20px;
 }
 
-.header-focus li:before {
-	content: '';
-	height: 10px;
-	width: 10px;
-	display: block;
-	background-color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	left: 15px;
-	top: 15px;
-} 
-
-.header-focus li:after {
-	content: '';
-	height: 10px;
-	width: 10px;
-	display: block;
-	background-color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	right: 15px;
-	top: 15px;
-} 
-
-.header-focus li.li-focus {
-	display: block;
-	width: 100%;
-	background-color: #fff;
-	margin: 10px 0 0 0;
-	font-size: .8em;
-	padding: 0;
-	clip-path: none;
-	text-transform: uppercase;
-	font-weight: 100;
+.single-research {
+	margin-bottom: 28px;
+	border-left: 4px solid #00b3be;
+	padding-left: 7px;
 }
 
-.header-focus li.li-focus:before, .header-focus li.li-focus:after {
-	display: none;
+.single-research p {
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
-.no-pad {
-	padding: 0;
-}
+//presentation 
 
-.header-box {
-	width: 48%;
-	display: inline-block;
-	margin: 30px auto 0 auto;
-	text-align: center;	
-}
-
-.header-box:first-of-type{
-	border-right: 2px solid #efefef;
-}
-
-.big-number {
-	font-weight: 700;
-	font-size: 5em;
-	color: $gray;
-	line-height: 1;	
-}
-
-.theme-box {
-	margin: 30px 0;
-    border-top: 2px solid #efefef;
-}
-
-#single-lesson-wrapper h2 {
-	border-bottom: 2px solid #efefef;
-}
-
-.holder {
-	margin: 20px 0 40px 0;
-}
-
-.total-time {
-	font-size: 1.2em;
-}
-
-.lesson-thumb {
-	border-radius: 10px;
+.presentation-row {
+	margin: 70px 0;
 }
 
 //NEWS Area

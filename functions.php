@@ -101,4 +101,21 @@ function sci_dis_research(){
 	endif;
 }
 
+function sci_dis_presentations(){
+	global $post;
+	if( have_rows('presentation_details', $post->ID) ):
+	    // Loop through rows.
+	    while( have_rows('presentation_details', $post->ID) ) : the_row();
+	    	get_template_part( 'loop-templates/content', 'presentation' );   
+	        
+	    // End loop.
+	    endwhile;
+
+	// No value.
+	else :
+	    // Do something...
+	endif;
+
+}
+
  //print("<pre>".print_r($a,true)."</pre>");}
