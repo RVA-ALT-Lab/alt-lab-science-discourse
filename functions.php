@@ -145,4 +145,38 @@ function sci_dis_presentations(){
 
 }
 
+//change permalink on single person posts to do lastname first
+
+function sci_dis_name_slug_reorder( $post_ID, $post, $update ) {
+    // allow 'publish', 'draft', 'future'
+    if ($post->post_type != 'person' || $post->post_status == 'auto-draft')
+        return;
+
+    // only change slug when the post is created (both dates are equal)
+    if ($post->post_date_gmt != $post->post_modified_gmt)
+        return;
+
+    // use title, since $post->post_name might have unique numbers added
+    $new_slug = sanitize_title( $post->post_title, $post_ID );
+    $explode_name = explode(' ', $post->post_title);
+    if (empty( $explode_name ))
+        return; // No subtitle or already in slug
+
+    $new_slug = end($explode_name). '-' . $explode_name[0];
+    if ($new_slug == $post->post_name)
+        return; // already set
+
+    // unhook this function to prevent infinite looping
+    remove_action( 'save_post', 'sci_dis_name_slug_reorder', 10, 3 );
+    // update the post slug (WP handles unique post slug)
+    wp_update_post( array(
+        'ID' => $post_ID,
+        'post_name' => $new_slug
+    ));
+    // re-hook this function
+    add_action( 'save_post', 'sci_dis_name_slug_reorder', 10, 3 );
+}
+add_action( 'save_post', 'sci_dis_name_slug_reorder', 10, 3 );
+
+
  //print("<pre>".print_r($a,true)."</pre>");}
