@@ -199,6 +199,11 @@ h1, h2, h3, h4, h5, h2 a {
 }
 
 //person land
+
+.people-row .col-md-4 {
+	margin-bottom: 50px;
+}
+
 .single-person {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
     -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
@@ -209,8 +214,8 @@ h1, h2, h3, h4, h5, h2 a {
 }
 
 .single-profile-img {
-	width: 220px;
-	height: 220px;
+	width: 100%;
+	height: auto;
 }
 
 .person-name {
