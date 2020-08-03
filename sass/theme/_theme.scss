@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h2 a {
 
 .single-research {
 	margin-bottom: 28px;
-	border-left: 4px solid #00b3be;
+	border-left: 4px solid $blue;
 	padding-left: 7px;
 }
 
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h2 a {
 //NEWS Area
 
 .news-area {
-	background-color: #00b3be;	
+	background-color: $blue;	
 }
 
 .news-area h1 {
@@ -188,11 +188,11 @@ h1, h2, h3, h4, h5, h2 a {
 	width: 50%;
 	display: block;
 	margin: 0 auto;
-	border: 1px solid #00b3be; 
+	border: 1px solid $blue; 
 }
 
 .news-article a.understrap-read-more-link:hover {
-	background-color: #00b3be;
+	background-color: $blue;
 }
 .news-article a {
 	color: #000;
@@ -247,11 +247,11 @@ h1, h2, h3, h4, h5, h2 a {
 }
 
 .person-group.vcu {
-	background-color: #feb301;
+	background-color: $yellow;
 }
 
 .person-group.rps {
-	background-color: #00b3be;
+	background-color: $blue;
 }
 
 // .person-name:before {
@@ -296,6 +296,21 @@ h1, h2, h3, h4, h5, h2 a {
 
 .row-aqua .col-md-4:nth-of-type(-n+2){
 	border-right: 1px solid $aqua;
+}
+
+.row-gold {
+	margin: 40px 0;
+	padding: 40px 0;
+	border-bottom: 2px solid $gold;
+	border-top: 2px solid $gold;
+}
+
+.row-gold .col-md-4 {
+	padding: 10px 20px;	
+}
+
+.row-gold .col-md-4:nth-of-type(-n+2){
+	border-right: 1px solid $gold;
 }
 
 //footer
