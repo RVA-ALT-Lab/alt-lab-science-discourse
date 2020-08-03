@@ -92,7 +92,7 @@ add_image_size( 'person-profile', 350, 350, array( 'center', 'center' ) );
 function sci_dis_email(){
 	global $post;
 	if (get_field('email', $post->ID)){
-		return '<div class="person-email">' . get_field('email', $post->ID) . '</div>';
+		return '<div class="person-email"><a href="mailto:' . get_field('email', $post->ID) . '">' . get_field('email', $post->ID) . '</a></div>';
 	}
 }
 
