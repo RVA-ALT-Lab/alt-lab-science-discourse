@@ -57,6 +57,15 @@ function sci_dis_news(){
    return '<div class="row news-wrapper">' . $html . '</div>';
 }
 
+function sci_dis_profile_image(){
+	global $post;
+	if(get_field('profile_image', $post->ID)['sizes']['person-profile']){
+		return get_field('profile_image')['sizes']['person-profile'];
+	} else {
+		return get_stylesheet_directory_uri() . '/imgs/smiley_bubble.svg';
+	}
+}
+
 
 function sci_dis_people(){
   $html = "";  
